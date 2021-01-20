@@ -8,16 +8,56 @@
   
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <div class="container">
+  <section class="social-proof">
+
+    <div class="slider-control">
+      <svg id="prev" xmlns="http://www.w3.org/2000/svg" width="12" height="18"><path fill="none" stroke="#8585AC" stroke-width="3" d="M11 1L3 9l8 8"/></svg>
+      <svg id="next" xmlns="http://www.w3.org/2000/svg" width="13" height="18"><path fill="none" stroke="#8585AC" stroke-width="3" d="M2 1l8 8-8 8"/></svg>
+    </div>
+
+    <div class="container">
+      <div class="testimonial active">
+        <div class="profile">
+          <div class="profile-img">
+            <img src="images/image-tanya.jpg" alt="">
+          </div>
+        </div>
+      
+        <figure>
+          <blockquote>
+              <p>“ I’ve been interested in coding for a while but never taken the jump, until now. 
+                I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+                excited about the future. ”</p>
+          </blockquote>
+          <figcaption>Tanya Sinclair <cite>UX Engineer</cite></figcaption>
+        </figure>
+      </div>
+
+      <div class="testimonial">
+        <div class="profile">
+          <div class="profile-img">
+            <img src="images/image-john.jpg" alt="">
+          </div>
+        </div>
+      
+        <figure>
+          <blockquote>
+              <p>“ If you want to lay the best foundation possible I’d recommend taking this course. 
+                The depth the instructors go into is incredible. I now feel so confident about 
+                starting up as a professional developer. ”</p>
+          </blockquote>
+          <figcaption>John Tarkpor <cite>Junior Front-end Developer</cite></figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- <div class="container">
     <div class="testimonial">
       <div class="profile">
         <div class="profile-img">
@@ -59,7 +99,7 @@
     </figure>
   </div>
   
-  </div>
+  </div> -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
