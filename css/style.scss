@@ -15,6 +15,11 @@ $font-family: "Inter";
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 body {
   font-size: $font-size;
   font-family: $font-family, sans-serif;
@@ -22,28 +27,21 @@ body {
   font-weight: 300;
   line-height: 1.5;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
   // background: url("../images/pattern-curve.svg") no-repeat left bottom / 80%;
 }
 
 section {
-  height: 100%;
-  width: 100%;
-  // padding: 0 1.3rem;
   background: url("../images/pattern-curve.svg") no-repeat left bottom/80%;
-  // url("../images/pattern-bg.svg") no-repeat left calc(100vw - 95vw) top
-  //   calc(100vh - 97vh) / 90%;
-  // background-position: left bottom, left 30% top 20%, right 10% top 10%; //1440 screen
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding: 2.5rem 0;
 
   .slider-control {
     position: absolute;
-    bottom: 58%;
+    top: 34vh;
     left: 50%;
     transform: translateX(-50%);
     background: white;
@@ -60,54 +58,64 @@ section {
 
 .container {
   // width: 95%;
-  max-width: 850px;
+  // max-width: 850px;
+  max-width: 100%;
+  height: 80%;
   margin: 0 auto;
-  // padding: 2.7rem 1rem;
-  padding: 1rem 1.5rem;
   position: relative;
 }
 
 .testimonial {
-  width: 100%;
-  height: 100%;
-  // padding: 2rem 1rem;
-  display: grid;
-  grid-template-rows: 350px auto;
-  gap: 4.5rem;
-
   display: none;
 
   .profile {
-    background: url("../images/pattern-bg.svg") no-repeat center center/97%;
-    // background: red;
-
-    position: relative;
+    background: url("../images/pattern-bg.svg") no-repeat center/contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 357px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
 
     .profile-img {
-      width: 290px;
-      height: 281px;
-      margin: 2.4rem auto 0;
+      width: 78%;
+      height: 70%;
       border-radius: 5px;
-      overflow: hidden;
 
       img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
   }
 }
 
 .active {
-  display: grid;
+  display: block;
 }
 
 figure {
   position: relative;
   text-align: center;
   font-size: 19px;
-  padding: 0 1rem;
+  padding: 1rem;
+  margin-bottom: 6rem;
+
+  &::before {
+    content: "";
+    // width: 20%;
+    // height: 15%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: -7%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../images/pattern-quotes.svg") no-repeat;
+    background-size: 20%;
+    background-position: center top;
+  }
 
   figcaption {
     margin-top: 1rem;
@@ -124,23 +132,83 @@ figure {
   }
 }
 
-figure::before {
-  content: "";
-  width: 30%;
-  height: 30%;
-  margin: 0 auto;
-  position: absolute;
-  top: -12%;
-  left: 55%;
-  transform: translateX(-50%);
-  background: url("../images/pattern-quotes.svg") no-repeat;
-  background-size: 60%;
-}
-
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+// Media queries
+@media (min-width: 1440px) {
+  .social-proof {
+    height: 100vh;
+    padding: 4rem 4rem 0;
+
+    .slider-control {
+      top: 71%;
+      left: 63%;
+      transform: unset;
+    }
+
+    .container {
+      height: 100%;
+    }
+
+    .testimonial {
+      width: 100%;
+      height: 100%;
+
+      .profile {
+        width: 100%;
+        height: 550px;
+        flex: 1;
+
+        .profile-img {
+          height: 83%;
+          overflow: hidden;
+          margin-top: 0.9rem;
+
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  .active {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  figure {
+    text-align: left;
+    margin-left: 4rem;
+    flex: 1;
+
+    &::before {
+      top: -5%;
+      left: 24%;
+      background-size: 13%;
+    }
+
+    blockquote {
+      font-size: 32px;
+    }
+
+    figcaption {
+      cite {
+        display: unset;
+        margin-left: 0.3rem;
+      }
+    }
+  }
+
+  .attribution {
+    padding-top: 3.5rem;
+    padding-bottom: 0.5rem;
+  }
 }

@@ -8,6 +8,11 @@
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 body {
   font-size: 17px;
   font-family: "Inter", sans-serif;
@@ -15,20 +20,29 @@ body {
   font-weight: 300;
   line-height: 1.5;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
 }
 
 section {
-  height: 100%;
-  width: 100%;
   background: url("../images/pattern-curve.svg") no-repeat left bottom/80%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section .slider-control {
   position: absolute;
-  bottom: 58%;
+  top: 34vh;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -51,53 +65,69 @@ section .slider-control {
 }
 
 .container {
-  max-width: 850px;
+  max-width: 100%;
+  height: 80%;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
   position: relative;
 }
 
 .testimonial {
-  width: 100%;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 350px auto;
-      grid-template-rows: 350px auto;
-  gap: 4.5rem;
   display: none;
 }
 
 .testimonial .profile {
-  background: url("../images/pattern-bg.svg") no-repeat center center/97%;
-  position: relative;
+  background: url("../images/pattern-bg.svg") no-repeat center/contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 357px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
 .testimonial .profile .profile-img {
-  width: 290px;
-  height: 281px;
-  margin: 2.4rem auto 0;
+  width: 78%;
+  height: 70%;
   border-radius: 5px;
-  overflow: hidden;
 }
 
 .testimonial .profile .profile-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .active {
-  display: -ms-grid;
-  display: grid;
+  display: block;
 }
 
 figure {
   position: relative;
   text-align: center;
   font-size: 19px;
-  padding: 0 1rem;
+  padding: 1rem;
+  margin-bottom: 6rem;
+}
+
+figure::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: -7%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url("../images/pattern-quotes.svg") no-repeat;
+  background-size: 20%;
+  background-position: center top;
 }
 
 figure figcaption {
@@ -114,20 +144,6 @@ figure figcaption cite {
   font-style: normal;
 }
 
-figure::before {
-  content: "";
-  width: 30%;
-  height: 30%;
-  margin: 0 auto;
-  position: absolute;
-  top: -12%;
-  left: 55%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background: url("../images/pattern-quotes.svg") no-repeat;
-  background-size: 60%;
-}
-
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -135,5 +151,79 @@ figure::before {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media (min-width: 1440px) {
+  .social-proof {
+    height: 100vh;
+    padding: 4rem 4rem 0;
+  }
+  .social-proof .slider-control {
+    top: 71%;
+    left: 63%;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .social-proof .container {
+    height: 100%;
+  }
+  .social-proof .testimonial {
+    width: 100%;
+    height: 100%;
+  }
+  .social-proof .testimonial .profile {
+    width: 100%;
+    height: 550px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .social-proof .testimonial .profile .profile-img {
+    height: 83%;
+    overflow: hidden;
+    margin-top: 0.9rem;
+  }
+  .social-proof .testimonial .profile .profile-img img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  figure {
+    text-align: left;
+    margin-left: 4rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  figure::before {
+    top: -5%;
+    left: 24%;
+    background-size: 13%;
+  }
+  figure blockquote {
+    font-size: 32px;
+  }
+  figure figcaption cite {
+    display: unset;
+    margin-left: 0.3rem;
+  }
+  .attribution {
+    padding-top: 3.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
