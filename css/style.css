@@ -26,6 +26,12 @@ body {
   background: url("../images/pattern-curve.svg") no-repeat left bottom/80%;
 }
 
+.social-proof .container {
+  width: 95%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .social-proof .profile {
   background: url("../images/pattern-bg.svg") no-repeat center/contain;
   display: -webkit-box;
@@ -40,21 +46,33 @@ body {
   width: 90%;
   height: 357px;
   margin: 0 auto;
-  margin-bottom: 3rem;
 }
 
 .social-proof .profile .profile-img {
   width: 78%;
-  height: 263px;
+  height: 250px;
   margin: 0 auto;
   border-radius: 5px;
   position: relative;
+}
+
+.social-proof .profile .profile-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-box-shadow: 95px -54px 53px 61px rgba(97, 97, 206, 0.5);
+          box-shadow: 95px -54px 53px 61px rgba(97, 97, 206, 0.5);
+  width: 20%;
+  z-index: -1;
 }
 
 .social-proof .profile .profile-img img {
   border-radius: 5px;
   -o-object-fit: contain;
      object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
   display: none;
   height: 100%;
   width: 100%;
@@ -83,9 +101,11 @@ body {
           align-items: center;
   width: 90px;
   height: 40px;
-  -webkit-box-shadow: 1px 24px 35px 20px rgba(97, 97, 206, 0.2);
-          box-shadow: 1px 24px 35px 20px rgba(97, 97, 206, 0.2);
   z-index: 2;
+}
+
+.quote {
+  margin-top: 3rem;
 }
 
 .quote .active-quote {
@@ -143,6 +163,9 @@ body {
   .social-proof {
     height: 100vh;
     padding: 0 4rem;
+    background-size: 45%;
+  }
+  .social-proof .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -156,11 +179,12 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-size: 45%;
+    height: 100%;
+    max-width: 1350px;
   }
   .social-proof .profile {
     width: 100%;
-    height: 70%;
+    height: 550px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -168,13 +192,8 @@ body {
   }
   .social-proof .profile .profile-img {
     height: 82%;
-    width: 73%;
+    width: 71%;
     margin-top: 0.9rem;
-  }
-  .social-proof .profile .profile-img img {
-    -o-object-fit: contain;
-       object-fit: contain;
-    border-radius: 5px;
   }
   .social-proof .profile .profile-img .slider-control {
     bottom: 1%;
@@ -189,10 +208,10 @@ body {
         -ms-flex: 1;
             flex: 1;
     margin: 0 -9rem 0 5rem;
+    padding: 0 0rem 0 3rem;
   }
   .social-proof .quote figure {
     text-align: left;
-    margin-left: 4rem;
     padding: 0;
   }
   .social-proof .quote figure::before {
