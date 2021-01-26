@@ -43,14 +43,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
+  max-width: 345px;
   height: 357px;
   margin: 0 auto;
 }
 
 .social-proof .profile .profile-img {
-  width: 78%;
-  height: 250px;
+  max-width: 268px;
+  max-height: 261px;
   margin: 0 auto;
   border-radius: 5px;
   position: relative;
@@ -183,16 +183,16 @@ body {
     max-width: 1350px;
   }
   .social-proof .profile {
-    width: 100%;
-    height: 550px;
+    max-width: 649px;
+    height: 630px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     background-size: contain;
   }
   .social-proof .profile .profile-img {
-    height: 82%;
-    width: 71%;
+    max-height: 513px;
+    max-width: 473px;
     margin-top: 0.9rem;
   }
   .social-proof .profile .profile-img .slider-control {
