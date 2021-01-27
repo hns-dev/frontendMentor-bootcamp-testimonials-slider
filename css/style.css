@@ -105,6 +105,11 @@ body {
   z-index: 2;
 }
 
+.social-proof .profile .profile-img .slider-control #prev,
+.social-proof .profile .profile-img .slider-control #next {
+  height: 15px;
+}
+
 .quote {
   margin-top: 3rem;
 }
@@ -218,6 +223,10 @@ body {
             transform: unset;
     width: 95px;
     height: 42px;
+  }
+  .social-proof .profile .profile-img .slider-control #prev,
+  .social-proof .profile .profile-img .slider-control #next {
+    height: 14px;
   }
   .social-proof .quote {
     -webkit-box-flex: 1;

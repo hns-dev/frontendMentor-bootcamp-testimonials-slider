@@ -97,6 +97,12 @@ body {
         // box-shadow: 1px 20px 21px 2px rgba(97, 97, 206, 0.2);
         // box-shadow: 1px 24px 35px 20px rgba(97, 97, 206, 0.2);
         z-index: 2;
+
+        #prev,
+        #next {
+          // width: 14px;
+          height: 15px;
+        }
       }
     }
   }
@@ -213,6 +219,12 @@ body {
           transform: unset;
           width: 95px;
           height: 42px;
+
+          #prev,
+          #next {
+            // width: 14px;
+            height: 14px;
+          }
         }
       }
     }
