@@ -12,7 +12,7 @@ function nextSlide(){
     activeImg.classList.remove('active-img');
     activeQuote.classList.remove('active-quote');
 
-    if(activeImg.nextElementSibling && activeImg.nextElementSibling.classList.contains('profile-pic')){
+    if(activeImg.nextElementSibling){
         activeImg.nextElementSibling.classList.add('active-img');
     } else{
         profileImgs[0].classList.add('active-img');
