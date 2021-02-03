@@ -6,6 +6,20 @@ const quotes = document.querySelectorAll('.quote-block');
 prev.addEventListener('click', prevSlide);
 next.addEventListener('click', nextSlide);
 
+document.addEventListener("keydown", (e) =>{
+    if(e.code === 'ArrowLeft'){
+        console.log('wow! prev.');
+        prevSlide();
+    }
+});
+
+document.addEventListener('keyup', (e) =>{
+    if(e.code === 'ArrowRight'){
+        console.log('wow! prev.');
+        nextSlide();
+    }
+});
+
 function nextSlide(){
     const activeImg = document.querySelector('.active-img');
     const activeQuote = document.querySelector('.active-quote');
