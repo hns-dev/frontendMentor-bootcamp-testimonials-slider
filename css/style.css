@@ -128,8 +128,6 @@ body {
   height: 40px;
   cursor: pointer;
   padding: 0.8em;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 
 .social-proof .testimonial-imgs .testimonial-imgs-inner .slider-control svg path {
@@ -185,8 +183,8 @@ body {
 
 .social-proof .testimonial-quotes .active-quote {
   opacity: 1;
-  -webkit-transition: opacity 0.8s ease-in-out;
-  transition: opacity 0.8s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .attribution {
@@ -318,7 +316,6 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0;
-    opacity: 0;
   }
   .social-proof .testimonial-quotes figure p::before {
     top: -27%;
@@ -372,12 +369,6 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
     margin: 0;
-    opacity: 0;
-  }
-  .social-proof .testimonial-imgs .testimonial-imgs-inner .imgs-container .active-img {
-    opacity: 1;
-    -webkit-transition: opacity 0.8s ease-in-out;
-    transition: opacity 0.8s ease-in-out;
   }
   .social-proof .testimonial-imgs .testimonial-imgs-inner .slider-control {
     left: 16%;
@@ -424,7 +415,6 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0 1em;
-    opacity: 0;
   }
   .social-proof .testimonial-quotes figure p::before {
     top: -31%;
@@ -438,23 +428,27 @@ body {
     display: inline;
     margin-left: 0.5em;
   }
-  .social-proof .testimonial-quotes .active-quote {
-    opacity: 1;
-    -webkit-transition: opacity 0.8s ease-in-out;
-    transition: opacity 0.8s ease-in-out;
-  }
 }
 
 @media (min-width: 1400px) {
+  .social-proof .testimonial-imgs {
+    right: 76px;
+  }
   .social-proof .testimonial-imgs .testimonial-imgs-inner {
-    width: 554px;
+    width: 540px;
     height: 560px;
   }
   .social-proof .testimonial-quotes {
-    left: 151px;
+    left: 135px;
   }
   .social-proof .testimonial-quotes figure {
     font-size: 32px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .social-proof {
+    padding-right: 5em;
   }
 }
 /*# sourceMappingURL=style.css.map */
