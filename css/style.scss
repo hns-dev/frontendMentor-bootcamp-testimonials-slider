@@ -164,24 +164,6 @@ body {
   }
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  padding-bottom: 0.5rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  width: 100%;
-}
-
-.attribution a {
-  color: #3e52a3;
-  text-decoration: none;
-  font-weight: 400;
-}
-
 // Media Queries
 @media (min-width: 700px) {
   .social-proof {
